@@ -1,0 +1,64 @@
+#body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0 100px;
+  padding-left: 110px;
+}
+
+#score{
+  width: 20vw;
+  height: 5vh;
+  background: red;
+  margin: 0 20px;
+}
+
+#lives{
+  width: 20vw;
+  height: 5vh;
+  background: pink;
+  margin: 0 0 0 350px;
+}
+
+#invaders{
+  width: 67vw;
+  height: 45vh;
+  background: yellow;
+  margin: 20px;
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+
+.row {
+  padding-left: 25px;
+  padding-top: 6px;
+}
+
+span {
+  width: 5vw;
+  height: 6vh;
+  background: red;
+  display: inline-block;
+  margin: 5px 5px;
+}
+
+#bunkers{
+  width: 80vw;
+  height: 10vh;
+  background: green;
+  margin: 50px 50px 50px 120px;
+  position: relative;
+  top: 510px;
+}
+
+#spaceship{
+  width: 7vw;
+  height: 5vh;
+  background: blue;
+  position: absolute;
+  top: 680px;
+  left: 650px;
+}
