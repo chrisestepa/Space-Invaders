@@ -8,11 +8,12 @@ function Game (){
 
 Game.prototype.createGame = function (){
   $("button").remove();
+  $("h1").remove();
   console.log("remove button");
   $("<header>").appendTo("#space-invaders");
   console.log("add header");
-  $("<div>", {"id": "score", "class": "col-md-6"}).appendTo("header");
-  $("<div>", {"id": "lives", "class": "col-md-6"}).appendTo("header");
+  $("<div>", {"id": "score", "class": "col-md-6"}).html("Score: ").appendTo("header");
+  $("<div>", {"id": "lives", "class": "col-md-6"}).html("Lives: ").appendTo("header");
   $("<div>", {"id": "invaders"}).appendTo("#space-invaders");
   for (var i=0; i < 5; i++){
     $("<div>", {"class": "row" + i}).appendTo("#invaders");

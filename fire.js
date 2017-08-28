@@ -1,7 +1,7 @@
 function Fire(pos) {
   this.position = pos + 50;
   this.top = 620;
-  this.yMax = 80;
+  this.yMax = 120;
   this.control = "ok";
 }
 

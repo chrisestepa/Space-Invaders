@@ -13,23 +13,19 @@ Invaders.prototype.invadersMove = function() {
       if (this.x > this.minW) {
         this.x -= 5;
         $('#invaders').css("left", this.x);
-        $("span").css({"background-image": "./img/1 1.jpg", "backgrund-size": "cover"});
       } else {
-        this.y += 2;
+        this.y += 15;
         $('#invaders').css("top", this.y);
-        $("span").css({"background-image": "./img/1 1.jpg", "backgrund-size": "cover"});
         this.control = "right";
       }
       break;
     case "right":
-      if (this.x + 830 < (this.maxW)) {
+      if (this.x + 680 < (this.maxW)) {
         this.x += 5;
         $('#invaders').css("left", this.x);
-        $("span").css({"background-image": "./img/1 1.jpg", "backgrund-size": "cover"});
       } else {
-        this.y += 2;
+        this.y += 15;
         $('#invaders').css("top", this.y);
-        $("span").css({"background-image": "./img/1 1.jpg", "backgrund-size": "cover"});
         this.control = "left";
       }
       break;

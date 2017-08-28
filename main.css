@@ -3,6 +3,15 @@
   padding: 0;
 }
 
+h1 {
+  font-family: "Spac3 tech";
+  font-size: 120px;
+  color: #733;
+  text-shadow: 5px 2px #AA0;
+  text-align: center;
+  padding-top: 100px;
+}
+
 #space-invaders{
   margin: 0;
   padding: 0;
@@ -23,38 +32,63 @@ header {
 #score{
   width: 20vw;
   height: 5vh;
-  background: red;
+  background: rgba(0, 0, 0, 0.20);
+  border: 3px solid #A44;
   margin: 0 20px;
+  font-size: 20px;
+  padding-top: 2px;
+  padding-left: 5px;
+  color: white;
 }
 
 #lives{
   width: 20vw;
   height: 5vh;
-  background: pink;
+  background: rgba(0, 0, 0, 0.20);
+  border: 3px solid #A44;
   margin: 0 0 0 350px;
+  font-size: 20px;
+  padding-top: 2px;
+  padding-left: 5px;
+  color: white;
 }
 
 #invaders{
-  width: 67vw;
-  height: 45vh;
-  background: yellow;
-  margin: 20px;
+  width: 700px;
+  height: 320px;
+  margin: 0px;
   position: absolute;
-  top: 60px;
+  top: 70px;
   left: 200px;
 }
 
 .row0, .row1, .row2, .row3, .row4 {
-  padding-left: 25px;
-  padding-top: 6px;
+  padding-top: 2px;
 }
 
 span {
-  width: 5vw;
-  height: 6vh;
-  background: red;
+  width: 4vw;
+  height: 8vh;
   display: inline-block;
-  margin: 5px 5px;
+  margin: 0 3px;
+}
+
+.row0 span {
+  background-image: url("./img/1 1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.row1 span, .row2 span {
+  background-image: url("./img/2 1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.row3 span, .row4 span {
+  background-image: url("./img/3 1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #bunkers {
@@ -78,6 +112,7 @@ span {
   position: absolute;
   top: 640px;
   left: 650px;
+  border-radius: 20%;
 }
 
 hr {
@@ -92,15 +127,15 @@ hr {
 .shipFire {
   height: 20px;
   width: 5px;
-  background: #FCC;
+  background: #FFA;
   position: absolute;
   top: 640px;
 }
 
 #btn {
   position: absolute;
-  top: 20vw;
-  left: 42vw;
+  top: 35vw;
+  left: 45vw;
   width: 150px;
   height: 100px;
   background: rgba(0, 0, 0, 0.50);

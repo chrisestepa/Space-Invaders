@@ -1,6 +1,6 @@
 var game = new Game();
 var ship = new SpaceShip ();
-var invader = new Invaders (200, 100);
+var invader = new Invaders (200, 70);
 var newFire = new Fire(ship.position);
 var i=0;
 
