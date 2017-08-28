@@ -60,7 +60,7 @@ span {
 }
 
 #spaceship{
-  width: 7vw;
+  width: 100px;
   height: 5vh;
   background: blue;
   position: absolute;
@@ -75,4 +75,13 @@ hr {
   position: absolute;
   top: 670px;
   left: 70px;
+}
+
+#shipFire {
+  height: 15px;
+  width: 15px;
+  background: red;
+  position: absolute;
+  top: 640px;
+  border-radius: 50%;
 }
