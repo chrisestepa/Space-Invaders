@@ -3,9 +3,21 @@
   padding: 0;
 }
 
+#space-invaders{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 730px;
+  background-image: url("./img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 header {
-  margin: 10px 100px;
+  margin: 0px 100px;
   padding-left: 110px;
+  padding-top: 20px;
 }
 
 #score{
@@ -32,7 +44,7 @@ header {
   left: 200px;
 }
 
-.row {
+.row0, .row1, .row2, .row3, .row4 {
   padding-left: 25px;
   padding-top: 6px;
 }
@@ -49,7 +61,7 @@ span {
   margin-left: 50px;
 }
 
-.bunker{
+.bunker0, .bunker1, .bunker2, .bunker3 {
   width: 10vw;
   height: 10vh;
   background: green;
@@ -80,7 +92,18 @@ hr {
 #shipFire {
   height: 20px;
   width: 3px;
-  background: red;
+  background: #FCC;
   position: absolute;
   top: 640px;
+}
+
+#btn {
+  position: absolute;
+  top: 20vw;
+  left: 42vw;
+  width: 150px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.50);
+  color: #FBB;
+  font-size: 25px;
 }

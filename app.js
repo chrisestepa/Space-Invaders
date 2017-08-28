@@ -8,7 +8,10 @@ var gameReady = function () {
 };
 
 $(document).ready(function (){
-  setInterval (gameReady, 200);
+  $("#btn").on("click", function(){
+    game.createGame();
+    setInterval (gameReady, 200);
+  });
 });
 
 $(document).on('keydown', function(e) {
