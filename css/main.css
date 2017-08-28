@@ -10,6 +10,7 @@ h1 {
   text-shadow: 5px 2px #AA0;
   text-align: center;
   padding-top: 100px;
+  margin: 0;
 }
 
 #space-invaders{
@@ -17,7 +18,7 @@ h1 {
   padding: 0;
   width: 100%;
   height: 730px;
-  background-image: url("./img/background.jpg");
+  background-image: url("../img/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -74,19 +75,19 @@ span {
 }
 
 .row0 span {
-  background-image: url("./img/1 1.jpg");
+  background-image: url("../img/1 1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .row1 span, .row2 span {
-  background-image: url("./img/2 1.jpg");
+  background-image: url("../img/2 1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .row3 span, .row4 span {
-  background-image: url("./img/3 1.jpg");
+  background-image: url("../img/3 1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
 }
