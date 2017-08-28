@@ -24,6 +24,8 @@ $(document).on('keydown', function(e) {
   }
 }
   else if (key === 32){
-    ship.createFire();
+    var i = 0;
+    ship.createFire(i);
+    i++;
   }
 });

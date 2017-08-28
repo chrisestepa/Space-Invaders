@@ -1,14 +1,14 @@
 function SpaceShip (){
   this.position = 650;
   this.width = 100;
-  this.fire = $("<div>", {"id": "shipFire"});
   this.top = 640;
+  this.fire = [];
 }
 
-SpaceShip.prototype.createFire = function () {
+SpaceShip.prototype.createFire = function (i) {
   this.top = 640;
-  this.fire = this.fire.css({"left": this.position + this.width/2});
-  $("body").append(this.fire);
+  this.fire.push($("<div>", {"id": "shipFire"}).css({"left": this.position + this.width/2}));
+  $("body").append(this.fire[i]);
 };
 
 SpaceShip.prototype.shipFire = function (){
