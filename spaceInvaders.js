@@ -12,7 +12,7 @@ Game.prototype.createGame = function (){
   console.log("remove button");
   $("<header>").appendTo("#space-invaders");
   console.log("add header");
-  $("<div>", {"id": "score", "class": "col-md-6"}).html("Score: ").appendTo("header");
+  $("<div>", {"id": "score", "class": "col-md-6"}).html("Score: " + this.score).appendTo("header");
   $("<div>", {"id": "lives", "class": "col-md-6"}).html("Lives: ").appendTo("header");
   $("<div>", {"id": "invaders"}).appendTo("#space-invaders");
   for (var i=0; i < 5; i++){

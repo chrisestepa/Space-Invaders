@@ -93,6 +93,7 @@ span {
 
 #bunkers {
   margin-left: 50px;
+  display: none;
 }
 
 .bunker0, .bunker1, .bunker2, .bunker3 {

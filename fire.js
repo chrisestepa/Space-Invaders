@@ -5,7 +5,7 @@ function Fire(pos) {
   this.control = "ok";
 }
 
-Fire.prototype.createFire = function(pos, index) {
+Fire.prototype.createFire = function(pos) {
   if (this.control == "ok") {
     this.top = 620;
     this.fire = ($("<div>", {
@@ -21,10 +21,19 @@ Fire.prototype.createFire = function(pos, index) {
 Fire.prototype.shipFire = function() {
   if (this.top > this.yMax) {
     this.control = "no";
-    this.top -= 100 ;
+    this.top -= 100;
     $(".shipFire").css("top", this.top);
       } else {
     $(".shipFire").remove();
     this.control = "ok";
+  }
+};
+
+Fire.prototype.checkCollision = function(invPos){
+  if (this.top <= invPos){
+    return 1;
+  }
+  else {
+    return 0;
   }
 };

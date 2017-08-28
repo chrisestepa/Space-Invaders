@@ -20,7 +20,7 @@ Invaders.prototype.invadersMove = function() {
       }
       break;
     case "right":
-      if (this.x + 680 < (this.maxW)) {
+      if (this.x + 550 < (this.maxW)) {
         this.x += 5;
         $('#invaders').css("left", this.x);
       } else {
