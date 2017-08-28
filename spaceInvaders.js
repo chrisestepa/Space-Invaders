@@ -29,7 +29,7 @@ SpaceShip.prototype.createFire = function () {
 };
 
 SpaceShip.prototype.shipFire = function (){
-  this.top -= 90;
+  this.top -= 70;
   $("#shipFire").css("top", this.top);
 };
 

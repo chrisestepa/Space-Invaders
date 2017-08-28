@@ -78,10 +78,9 @@ hr {
 }
 
 #shipFire {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 3px;
   background: red;
   position: absolute;
   top: 640px;
-  border-radius: 50%;
 }
