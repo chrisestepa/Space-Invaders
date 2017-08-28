@@ -1,9 +1,9 @@
 var ship = new SpaceShip ();
 var game = new Game();
-var invader = new Invaders ();
+var invader = new Invaders (200, 100);
 
 $(document).ready(function (){
-  setInterval (invader.invadersMove(), 1000);
+  setInterval (gameReady, 200);
 });
 
 $(document).on('keydown', function(e) {
@@ -18,5 +18,8 @@ $(document).on('keydown', function(e) {
     ship.shipMove("right");
   }
 }
-
 });
+
+var gameReady = function () {
+  invader.invadersMove();
+};

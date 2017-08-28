@@ -4,7 +4,7 @@
 }
 
 header {
-  margin: 0 100px;
+  margin: 10px 100px;
   padding-left: 110px;
 }
 
@@ -28,7 +28,7 @@ header {
   background: yellow;
   margin: 20px;
   position: absolute;
-  top: 100px;
+  top: 60px;
   left: 200px;
 }
 
@@ -45,13 +45,18 @@ span {
   margin: 5px 5px;
 }
 
-#bunkers{
-  width: 80vw;
+#bunkers {
+  margin-left: 50px;
+}
+
+.bunker{
+  width: 10vw;
   height: 10vh;
   background: green;
-  margin: 50px 50px 50px 120px;
+  margin: 0px 50px 50px 120px;
   position: relative;
-  top: 510px;
+  top: 475px;
+  display: inline-block;
 }
 
 #spaceship{
@@ -59,6 +64,15 @@ span {
   height: 5vh;
   background: blue;
   position: absolute;
-  top: 680px;
+  top: 640px;
   left: 650px;
+}
+
+hr {
+  width: 90vw;
+  height: 0.5vh;
+  background: black;
+  position: absolute;
+  top: 670px;
+  left: 70px;
 }
