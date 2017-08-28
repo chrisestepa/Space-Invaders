@@ -73,7 +73,7 @@ span {
 
 #spaceship{
   width: 100px;
-  height: 5vh;
+  height: 30px;
   background: blue;
   position: absolute;
   top: 640px;
@@ -89,9 +89,9 @@ hr {
   left: 70px;
 }
 
-#shipFire {
+.shipFire {
   height: 20px;
-  width: 3px;
+  width: 5px;
   background: #FCC;
   position: absolute;
   top: 640px;

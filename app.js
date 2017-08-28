@@ -1,10 +1,12 @@
-var ship = new SpaceShip ();
 var game = new Game();
+var ship = new SpaceShip ();
 var invader = new Invaders (200, 100);
+var newFire = new Fire(ship.position);
+var i=0;
 
 var gameReady = function () {
   invader.invadersMove();
-  ship.shipFire();
+  newFire.shipFire();
 };
 
 $(document).ready(function (){
@@ -27,8 +29,7 @@ $(document).on('keydown', function(e) {
   }
 }
   else if (key === 32){
-    var i = 0;
-    ship.createFire(i);
+    newFire.createFire(ship.position, i);
     i++;
   }
 });

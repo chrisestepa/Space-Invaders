@@ -8,15 +8,16 @@ function Invaders (xpos, ypos){
 }
 
 Invaders.prototype.invadersMove = function() {
-  console.log("invadersmove");
   switch (this.control) {
     case "left":
       if (this.x > this.minW) {
         this.x -= 5;
         $('#invaders').css("left", this.x);
+        $("span").css({"background-image": "./img/1 1.jpg", "backgrund-size": "cover"});
       } else {
         this.y += 2;
         $('#invaders').css("top", this.y);
+        $("span").css({"background-image": "./img/1 1.jpg", "backgrund-size": "cover"});
         this.control = "right";
       }
       break;
@@ -24,9 +25,11 @@ Invaders.prototype.invadersMove = function() {
       if (this.x + 830 < (this.maxW)) {
         this.x += 5;
         $('#invaders').css("left", this.x);
+        $("span").css({"background-image": "./img/1 1.jpg", "backgrund-size": "cover"});
       } else {
         this.y += 2;
         $('#invaders').css("top", this.y);
+        $("span").css({"background-image": "./img/1 1.jpg", "backgrund-size": "cover"});
         this.control = "left";
       }
       break;
