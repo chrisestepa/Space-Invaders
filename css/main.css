@@ -75,19 +75,19 @@ span {
 }
 
 .row0 span {
-  background-image: url("../img/1 1.jpg");
+  background-image: url("../img/TIFS/row_1_1-1.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .row1 span, .row2 span {
-  background-image: url("../img/2 1.jpg");
+  background-image: url("../img/TIFS/row_2_1-1.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .row3 span, .row4 span {
-  background-image: url("../img/3 1.jpg");
+  background-image: url("../img/TIFS/row_3_1-1.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
