@@ -18,13 +18,13 @@ Game.prototype.createGame = function (){
   for (var i=0; i < 5; i++){
     $("<div>", {"class": "row" + i}).appendTo("#invaders");
      for (var j=0; j < 11; j++){
-      $("<span>").appendTo(".row" + i);
+      $("<span>", {"class": "single-invader"+i + j}).appendTo(".row" + i);
     }
     }
-  $("<div>", {"id": "bunkers"}).appendTo("#space-invaders");
+  /*$("<div>", {"id": "bunkers"}).appendTo("#space-invaders");
   for (var k=0; k < 4; k++){
     $("<div>", {"class": ("bunker" + k)}).appendTo("#bunkers");
-  }
+  }*/
   $("<div>", {"id": "spaceship"}).appendTo("#space-invaders");
   $("<hr>").appendTo("#space-invaders");
 

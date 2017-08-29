@@ -6,14 +6,14 @@ var newFire = new Fire(ship.position);
 var gameReady = function () {
   invader.invadersMove();
   newFire.shipFire();
-  game.score += newFire.checkCollision(invader.y);
+
   $('#score').html('Score: ' + game.score);
 };
 
 $(document).ready(function (){
   $("#btn").on("click", function(){
     game.createGame();
-    setInterval (gameReady, 200);
+    setInterval (gameReady, 20);
   });
 });
 
@@ -31,5 +31,6 @@ $(document).on('keydown', function(e) {
 }
   else if (key === 32){
     newFire.createFire(ship.position);
+    newFire.checkCollision();
   }
 });

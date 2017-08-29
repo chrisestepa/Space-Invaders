@@ -21,7 +21,7 @@ Fire.prototype.createFire = function(pos) {
 Fire.prototype.shipFire = function() {
   if (this.top > this.yMax) {
     this.control = "no";
-    this.top -= 100;
+    this.top -= 25;
     $(".shipFire").css("top", this.top);
       } else {
     $(".shipFire").remove();
@@ -29,8 +29,10 @@ Fire.prototype.shipFire = function() {
   }
 };
 
-Fire.prototype.checkCollision = function(invPos){
-  if (this.top <= invPos){
+Fire.prototype.checkCollision = function(){
+var col = $(".shipFire").collision(".row4");
+if (col[0]){
+    $(col[0]).remove();
     return 1;
   }
   else {

@@ -11,7 +11,7 @@ Invaders.prototype.invadersMove = function() {
   switch (this.control) {
     case "left":
       if (this.x > this.minW) {
-        this.x -= 5;
+        this.x -= 1;
         $('#invaders').css("left", this.x);
       } else {
         this.y += 15;
@@ -21,7 +21,7 @@ Invaders.prototype.invadersMove = function() {
       break;
     case "right":
       if (this.x + 550 < (this.maxW)) {
-        this.x += 5;
+        this.x += 1;
         $('#invaders').css("left", this.x);
       } else {
         this.y += 15;
