@@ -22,20 +22,18 @@ Fire.prototype.createFire = function(pos) {
 Fire.prototype.shipFire = function() {
   if (this.top > this.yMax) {
     this.control = "no";
-    this.top -= 25;
+    this.top -= 15;
     $(".shipFire").css("top", this.top);
-      } else {
+  } else {
     $(".shipFire").remove();
     this.control = "ok";
   }
 };
 
 Fire.prototype.checkCollision = function() {
-  var span = $(".shipFire").collision("span");
-
+  var span = $(".shipFire").collision(".invader");
   if (span[0]) {
-    $(span).css("background", "rgba(0,0,0,0");
-    console.log("THIS TOP: " + this.top + "THIS CONTROL: " + this.control);
+    $(span).removeClass("invader").css("background", "rgba(0,0,0,0");
     $('.shipFire').remove();
     this.control = "no";
     this.top = 620;

@@ -5,6 +5,7 @@ var newFire = new Fire(ship.position);
 
 var gameReady = function () {
   newFire.shipFire();
+      newFire.checkCollision();
   invader.invadersMove();
 };
 
@@ -29,7 +30,6 @@ $(document).on('keydown', function(e) {
 }
   else if (key === 32){
     newFire.createFire(ship.position);
-    game.score += newFire.checkCollision();
-    $('#score').html("Score: " + game.score);
+
   }
 });
