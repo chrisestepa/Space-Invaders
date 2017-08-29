@@ -4,16 +4,14 @@ var invader = new Invaders (200, 70);
 var newFire = new Fire(ship.position);
 
 var gameReady = function () {
-  invader.invadersMove();
   newFire.shipFire();
-
-  $('#score').html('Score: ' + game.score);
+  invader.invadersMove();
 };
 
 $(document).ready(function (){
   $("#btn").on("click", function(){
     game.createGame();
-    setInterval (gameReady, 20);
+    setInterval (gameReady, 15);
   });
 });
 
@@ -31,6 +29,7 @@ $(document).on('keydown', function(e) {
 }
   else if (key === 32){
     newFire.createFire(ship.position);
-    newFire.checkCollision();
+    game.score += newFire.checkCollision();
+    $('#score').html("Score: " + game.score);
   }
 });
