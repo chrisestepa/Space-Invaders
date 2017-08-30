@@ -5,14 +5,14 @@ var newFire = new Fire(ship.position);
 
 var gameReady = function () {
   newFire.shipFire();
-      newFire.checkCollision();
+  newFire.checkCollision();
   invader.invadersMove();
 };
 
 $(document).ready(function (){
   $("#btn").on("click", function(){
     game.createGame();
-    setInterval (gameReady, 15);
+    setInterval (gameReady, 25);
   });
 });
 
