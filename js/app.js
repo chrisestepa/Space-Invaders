@@ -2,18 +2,25 @@ var game = new Game();
 var ship = new SpaceShip ();
 var invader = new Invaders (200, 70);
 var newFire = new Fire(ship.position);
+var interval;
+var gameOver = true;
 
 var gameReady = function () {
   newFire.shipFire();
   newFire.checkCollision();
   invader.invadersMove();
   invader.invadersFire();
+  game.lives -= invader.checkCollision();
+  gameOver = game.checkGame();
+  if (!gameOver) {
+    clearInterval(interval);
+  }
 };
 
 $(document).ready(function (){
   $("#btn").on("click", function(){
     game.createGame();
-    setInterval (gameReady,30);
+    interval = setInterval (gameReady,30);
   });
 });
 

@@ -46,7 +46,6 @@ Invaders.prototype.invadersFire = function() {
   }
   this.top += 15;
   this.fire.css("top", this.top);
-  console.log("THIS TOP: " + this.top);
   if (this.top > this.maxY){
     this.top = 0;
     this.fireControl = true;
@@ -54,33 +53,11 @@ Invaders.prototype.invadersFire = function() {
 
 };
 
-
-/*
-Fire.prototype.createFire = function(pos) {
-  if (this.control == "ok") {
-    this.top = 620;
-    this.fire = ($("<div>", {"class": "shipFire"}).css({"left": pos + 50,"top": this.top}));
-    this.fire.appendTo("#space-invaders");
-  }
-};
-
-Fire.prototype.shipFire = function() {
-  if (this.top > this.yMax) {
-    this.control = "no";
-    this.top -= 15;
-    $(".shipFire").css("top", this.top);
-  } else {
-    $(".shipFire").remove();
-    this.control = "ok";
-  }
-};
-
-Fire.prototype.checkCollision = function() {
-  var span = $(".shipFire").collision(".invader");
+Invaders.prototype.checkCollision = function() {
+  var span = $(".invaderFire").collision("#spaceship");
   if (span[0]) {
-    $(span).removeClass("invader").css("background", "rgba(0,0,0,0");
-    $('.shipFire').remove();
-    this.control = "no";
-    this.top = 620;
+    this.top = 0;
+    return 1;
   }
-};*/
+  return 0;
+};

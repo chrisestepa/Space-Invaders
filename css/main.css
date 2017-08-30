@@ -151,3 +151,13 @@ hr {
   color: #FBB;
   font-size: 25px;
 }
+
+#gameover {
+  font-family: "Spac3 tech";
+  font-size: 120px;
+  color: #733;
+  text-shadow: 5px 2px #AA0;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0;
+}

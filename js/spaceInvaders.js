@@ -29,3 +29,14 @@ Game.prototype.createGame = function (){
   $("<hr>").appendTo("#space-invaders");
 
 };
+
+Game.prototype.checkGame = function (){
+  if (this.lives === 0) {
+/*    $("#space-invaders").children().remove();
+  */  $("<h1>").html("GAME OVER").appendTo("#space-invaders");
+    return 0;
+  }
+  else {
+    return 1;
+  }
+};
