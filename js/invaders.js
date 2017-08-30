@@ -3,7 +3,7 @@ function Invaders (){
   this.y = 70;
   this.maxW = 1200;
   this.minW = 70;
-  this.maxY = 650;
+  this.maxY = 600;
   this.control = "right";
   this.width = 965;
   this.numOfInvaders = 55;
@@ -48,6 +48,7 @@ Invaders.prototype.invadersFire = function() {
   this.fire.css("top", this.top);
   if (this.top > this.maxY){
     this.top = 0;
+    this.fire.remove();
     this.fireControl = true;
   }
 

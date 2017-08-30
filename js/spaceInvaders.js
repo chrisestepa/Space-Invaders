@@ -9,9 +9,7 @@ function Game (){
 Game.prototype.createGame = function (){
   $("button").remove();
   $("h1").remove();
-  console.log("remove button");
   $("<header>").appendTo("#space-invaders");
-  console.log("add header");
   $("<div>", {"id": "score", "class": "col-md-6"}).html("Score: " + this.score).appendTo("header");
   $("<div>", {"id": "lives", "class": "col-md-6"}).html("Lives: ").appendTo("header");
   $("<div>", {"id": "invaders"}).appendTo("#space-invaders");
@@ -30,13 +28,11 @@ Game.prototype.createGame = function (){
 
 };
 
-Game.prototype.checkGame = function (){
+Game.prototype.checkGame = function() {
+  $("#lives").html("Lives: " + this.lives);
   if (this.lives === 0) {
-/*    $("#space-invaders").children().remove();
-  */  $("<h1>").html("GAME OVER").appendTo("#space-invaders");
     return 0;
-  }
-  else {
+  } else {
     return 1;
   }
 };
