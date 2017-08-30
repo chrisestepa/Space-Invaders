@@ -8,7 +8,8 @@ function Invaders (){
   this.width = 965;
   this.numOfInvaders = 55;
   this.fireControl = true;
-  this.top = 0;
+  this.fireTop = 0;
+  this.fireLeft = 0;
 }
 
 Invaders.prototype.invadersMove = function() {
@@ -40,14 +41,17 @@ Invaders.prototype.invadersFire = function() {
   var invaders = $('.invader');
   var randomInvader = invaders[(Math.floor(Math.random() * this.numOfInvaders))];
   if (this.fireControl) {
+    this.fireTop = $(randomInvader).position().top + $(randomInvader).height();
+    this.fireLeft = $(randomInvader).position().left+($(randomInvader).width()/2 + 6);
     this.fire = ($("<div>", {"class": "invaderFire"}));
     this.fire.appendTo(randomInvader);
     this.fireControl = false;
   }
-  this.top += 15;
-  this.fire.css("top", this.top);
-  if (this.top > this.maxY){
-    this.top = 0;
+  this.fireTop += 15;
+  this.fire.css({"top": this.fireTop, "left": this.fireLeft});
+  if (this.fireTop > this.maxY){
+    this.fireTop = 0;
+    this.fireLeft = 0;
     this.fire.remove();
     this.fireControl = true;
   }
@@ -55,9 +59,16 @@ Invaders.prototype.invadersFire = function() {
 };
 
 Invaders.prototype.checkCollision = function() {
-  var span = $(".invaderFire").collision("#spaceship");
-  if (span[0]) {
-    this.top = 0;
+  var collision1 = $(".invaderFire").collision("#spaceship");
+  var collision2 = $(".invaderFire").collision(".invader");
+  if (collision2[0]){
+    this.fire.addClass("hidden");
+    return 0;
+  }
+
+  if (collision1[0]) {
+    this.fireTop = 0;
+    this.fireLeft = 0;
     return 1;
   }
   return 0;
