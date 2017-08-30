@@ -109,8 +109,8 @@ span {
 }
 
 #spaceship{
-  width: 100px;
-  height: 30px;
+  width: 7vw;
+  height: 3vh;
   background: white;
   position: absolute;
   top: 640px;
