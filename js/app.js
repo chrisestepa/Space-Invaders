@@ -7,10 +7,11 @@ var gameOver = true;
 
 var gameReady = function () {
   newFire.shipFire();
-  newFire.checkCollision();
+  game.score += newFire.checkCollision();
   invader.invadersMove();
   invader.invadersFire();
   game.lives -= invader.checkCollision();
+  $('#score').html("SCORE: " + game.score);
   gameOver = game.checkGame();
   if (!gameOver) {
     clearInterval(myInterval);

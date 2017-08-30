@@ -28,10 +28,31 @@ Fire.prototype.shipFire = function() {
 
 Fire.prototype.checkCollision = function() {
   var span = $(".shipFire").collision(".invader");
+
   if (span[0]) {
+    var score = this.checkScore(($(span)).parent().attr("class"));
     $(span).removeClass("invader").css("background", "rgba(0,0,0,0");
     $('.shipFire').remove();
     this.control = "no";
     this.top = 620;
+    return score;
+  }
+  return 0;
+};
+
+Fire.prototype.checkScore = function(invader) {
+  switch (invader) {
+    case "row0":
+      return 40;
+    case "row1":
+      return 20;
+    case "row2":
+      return 20;
+    case "row3":
+      return 10;
+    case "row4":
+      return 10;
+    default:
+      return 0;
   }
 };

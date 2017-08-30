@@ -6,7 +6,7 @@ function Invaders (){
   this.maxY = 600;
   this.control = "right";
   this.width = 965;
-  this.numOfInvaders = 55;
+//  this.numOfInvaders = 55;
   this.fireControl = true;
   this.fireTop = 0;
   this.fireLeft = 0;
@@ -39,7 +39,7 @@ Invaders.prototype.invadersMove = function() {
 
 Invaders.prototype.invadersFire = function() {
   var invaders = $('.invader');
-  var randomInvader = invaders[(Math.floor(Math.random() * this.numOfInvaders))];
+  var randomInvader = invaders[(Math.floor(Math.random() * invaders.length))];
   if (this.fireControl) {
     this.fireTop = $(randomInvader).position().top + $(randomInvader).height();
     this.fireLeft = $(randomInvader).position().left+($(randomInvader).width()/2 + 6);
