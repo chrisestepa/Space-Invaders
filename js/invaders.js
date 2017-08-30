@@ -1,6 +1,6 @@
-function Invaders (xpos, ypos){
-  this.x = xpos;
-  this.y = ypos;
+function Invaders (){
+  this.x = 200;
+  this.y = 70;
   this.maxW = 1200;
   this.minW = 70;
   this.control = "right";
@@ -14,7 +14,7 @@ Invaders.prototype.invadersMove = function() {
         this.x -= 1;
         $('#invaders').css("left", this.x);
       } else {
-        this.y += 15;
+        this.y += 40;
         $('#invaders').css("top", this.y);
         this.control = "right";
       }
@@ -24,7 +24,7 @@ Invaders.prototype.invadersMove = function() {
         this.x += 1;
         $('#invaders').css("left", this.x);
       } else {
-        this.y += 15;
+        this.y += 40;
         $('#invaders').css("top", this.y);
         this.control = "left";
       }

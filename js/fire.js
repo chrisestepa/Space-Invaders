@@ -6,6 +6,7 @@ function Fire(pos) {
   this.cont = 0;
 }
 
+
 Fire.prototype.createFire = function(pos) {
   if (this.control == "ok") {
     this.top = 620;

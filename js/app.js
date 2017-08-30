@@ -12,7 +12,7 @@ var gameReady = function () {
 $(document).ready(function (){
   $("#btn").on("click", function(){
     game.createGame();
-    setInterval (gameReady, 25);
+    setInterval (gameReady,30);
   });
 });
 

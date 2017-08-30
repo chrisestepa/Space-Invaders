@@ -17,7 +17,7 @@ Game.prototype.createGame = function (){
   $("<div>", {"id": "invaders"}).appendTo("#space-invaders");
   for (var i=0; i < 5; i++){
     $("<div>", {"class": "row" + i}).appendTo("#invaders");
-     for (var j=0; j < 10; j++){
+     for (var j=0; j < 11; j++){
       $("<span>", {"class": "invader single-invader"+i + j}).appendTo(".row" + i);
     }
     }

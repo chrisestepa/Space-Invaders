@@ -18,7 +18,8 @@ h1 {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background-image: url("../img/background.jpg");
+  background: black;
+  /*background-image: url("../img/background.jpg");*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,7 +35,7 @@ header {
   width: 20vw;
   height: 5vh;
   background: rgba(0, 0, 0, 0.20);
-  border: 3px solid #A44;
+  border: 3px solid white;
   margin: 0 20px;
   font-size: 20px;
   padding-top: 2px;
@@ -46,7 +47,7 @@ header {
   width: 20vw;
   height: 5vh;
   background: rgba(0, 0, 0, 0.20);
-  border: 3px solid #A44;
+  border: 3px solid white;
   margin: 0 0 0 350px;
   font-size: 20px;
   padding-top: 2px;
@@ -55,7 +56,7 @@ header {
 }
 
 #invaders{
-  width: 640px;
+  width: 700px;
   height: 320px;
   margin: 0px;
   position: absolute;
@@ -68,10 +69,10 @@ header {
 }
 
 span {
-  width: 4vw;
-  height: 8vh;
+  width: 3vw;
+  height: 7vh;
   display: inline-block;
-  margin: 0 3px;
+  margin: 0 10px;
 }
 
 .row0 span {
@@ -110,7 +111,7 @@ span {
 #spaceship{
   width: 100px;
   height: 30px;
-  background: blue;
+  background: white;
   position: absolute;
   top: 640px;
   left: 650px;
@@ -120,7 +121,7 @@ span {
 hr {
   width: 90vw;
   height: 0.5vh;
-  background: black;
+  background: white;
   position: absolute;
   top: 670px;
   left: 70px;
@@ -136,7 +137,7 @@ hr {
 
 #btn {
   position: absolute;
-  top: 35vw;
+  top: 30vw;
   left: 45vw;
   width: 150px;
   height: 100px;
