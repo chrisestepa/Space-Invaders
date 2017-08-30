@@ -7,6 +7,7 @@ var gameReady = function () {
   newFire.shipFire();
   newFire.checkCollision();
   invader.invadersMove();
+  invader.invadersFire();
 };
 
 $(document).ready(function (){

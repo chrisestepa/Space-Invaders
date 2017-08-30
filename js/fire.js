@@ -10,8 +10,8 @@ function Fire(pos) {
 Fire.prototype.createFire = function(pos) {
   if (this.control == "ok") {
     this.top = 620;
-    this.fire = ($("<div>", {"class": "shipFire"}).css({"left": pos + 50,"top": this.top}));
-    this.fire.appendTo("#space-invaders");
+    var fire = ($("<div>", {"class": "shipFire"}).css({"left": pos + 50,"top": this.top}));
+    fire.appendTo("#space-invaders");
   }
 };
 

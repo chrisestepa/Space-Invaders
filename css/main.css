@@ -132,7 +132,13 @@ hr {
   width: 5px;
   background: #FFA;
   position: absolute;
-  top: 640px;
+}
+
+.invaderFire {
+  height: 20px;
+  width: 5px;
+  background: #F22;
+  position: absolute;
 }
 
 #btn {
