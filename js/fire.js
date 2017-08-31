@@ -36,9 +36,7 @@ Fire.prototype.checkCollision = function() {
   if (bunkerHit[0]) {
     $(bunkerHit).removeClass("bunker-div solid").addClass("broke");
     $('.shipFire').remove();
-    this.control = "no";
-    this.top = 620;
-    }
+  }
 
   if (invaderHit[0]) {
     var score = this.checkScore(($(invaderHit)).parent().attr("class"));
@@ -48,8 +46,6 @@ Fire.prototype.checkCollision = function() {
     }, 200);
     this.targetAudio.play();
     $('.shipFire').remove();
-    this.control = "no";
-    this.top = 620;
     return score;
   }
   return 0;

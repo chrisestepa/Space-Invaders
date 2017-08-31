@@ -4,17 +4,22 @@ var invader = new Invaders (200, 70);
 var newFire = new Fire(ship.position);
 var myInterval;
 var gameOver = true;
+var hitVar = 0;
 
 var gameReady = function () {
   newFire.shipFire();
   game.score += newFire.checkCollision();
   invader.invadersMove();
   invader.invadersFire();
-  game.lives -= invader.checkCollision();
+  hitVar = invader.checkCollision();
+  if (hitVar){
+    ship.position = 650;
+    $("#spaceship").css("left", ship.position);
+  }
+  game.lives -= hitVar;
   $('#score').html("SCORE: " + game.score);
   gameOver = game.checkGame();
   if (!gameOver) {
-    $('#spaceship').css("background", this.position);
     clearInterval(myInterval);
   }
 };
