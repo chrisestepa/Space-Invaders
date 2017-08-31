@@ -97,9 +97,12 @@ span {
 
 
 #spaceship{
-  width: 7vw;
-  height: 3vh;
-  background: green;
+  width: 75px;
+  height: 40px;
+  background-image: url('../img/player.png');
+  background-size: contain;
+  opacity: 0.6;
+  background-repeat: no-repeat;
   position: absolute;
   top: 640px;
   left: 650px;

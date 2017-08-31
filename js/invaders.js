@@ -10,6 +10,7 @@ function Invaders (){
   this.fireControl = true;
   this.fireTop = 0;
   this.fireLeft = 0;
+  this.audioHit = new Audio('music/explosion.wav');
 }
 
 Invaders.prototype.invadersMove = function() {
@@ -47,7 +48,7 @@ Invaders.prototype.invadersFire = function() {
     this.fire.appendTo(randomInvader);
     this.fireControl = false;
   }
-  this.fireTop += 15;
+  this.fireTop += 25;
   this.fire.css({"top": this.fireTop, "left": this.fireLeft});
   if (this.fireTop > this.maxY){
     this.fireTop = 0;
@@ -76,6 +77,7 @@ Invaders.prototype.checkCollision = function() {
   }
 
   if (collision1[0]) {
+    this.audioHit.play();
     this.fireTop = 0;
     this.fireLeft = 0;
     return 1;

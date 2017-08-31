@@ -14,6 +14,7 @@ var gameReady = function () {
   $('#score').html("SCORE: " + game.score);
   gameOver = game.checkGame();
   if (!gameOver) {
+    $('#spaceship').css("background", this.position);
     clearInterval(myInterval);
   }
 };
