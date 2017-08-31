@@ -9,6 +9,7 @@ function Game (){
 Game.prototype.createGame = function (){
   $("button").remove();
   $("h1").remove();
+  $("<audio autoplay='autoplay'>").html("<source src='./music/Space Invaders - Space Invaders.mp3'/>");
   $("<header>").appendTo("#space-invaders");
   $("<div>", {"id": "score", "class": "col-md-6"}).html("Score: " + this.score).appendTo("header");
   $("<div>", {"id": "lives", "class": "col-md-6"}).html("Lives: ").appendTo("header");
@@ -19,12 +20,10 @@ Game.prototype.createGame = function (){
       $("<span>", {"class": "invader single-invader"+i + j}).appendTo(".row" + i);
     }
     }
-  // BUNKERS
   $("<section>", {"id": "bunkers"}).appendTo("#space-invaders");
   for (var m = 0; m < 4; m++){
     bunkerBuilder(m);
   }
-  /////////
   $("<div>", {"id": "spaceship"}).appendTo("#space-invaders");
   $("<hr>").appendTo("#space-invaders");
 
