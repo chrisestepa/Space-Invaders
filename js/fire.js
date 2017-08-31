@@ -27,11 +27,19 @@ Fire.prototype.shipFire = function() {
 };
 
 Fire.prototype.checkCollision = function() {
-  var span = $(".shipFire").collision(".invader");
+  var bunkerHit = $(".shipFire").collision(".bunker-div");
+  var invaderHit = $(".shipFire").collision(".invader");
 
-  if (span[0]) {
-    var score = this.checkScore(($(span)).parent().attr("class"));
-    $(span).removeClass("invader").css("background", "rgba(0,0,0,0");
+  if (bunkerHit[0]) {
+    $(bunkerHit).removeClass("bunker-div solid").addClass("broke");
+    $('.shipFire').remove();
+    this.control = "no";
+    this.top = 620;
+    }
+
+  if (invaderHit[0]) {
+    var score = this.checkScore(($(invaderHit)).parent().attr("class"));
+    $(invaderHit).removeClass("invader").css("background", "rgba(0,0,0,0");
     $('.shipFire').remove();
     this.control = "no";
     this.top = 620;

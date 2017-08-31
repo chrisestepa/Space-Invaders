@@ -41,16 +41,16 @@ Game.prototype.checkGame = function() {
 
 var bunkerBuilder = function (bunker){
   $("<div>", {"id": "bunker" + bunker, "class": "container"}).appendTo("#bunkers");
-  $("<div>", {"class": "solid left-corner"}).appendTo("#bunker" + bunker);
+  $("<div>", {"class": "bunker-div solid left-corner"}).appendTo("#bunker" + bunker);
   for (var j = 0; j < 3; j++){
-      $("<div>", {"class": "solid"}).appendTo("#bunker" + bunker);
+      $("<div>", {"class": "bunker-div solid"}).appendTo("#bunker" + bunker);
     }
-    $("<div>", {"class": "solid right-corner"}).appendTo("#bunker" + bunker);
+    $("<div>", {"class": "bunker-div solid right-corner"}).appendTo("#bunker" + bunker);
     for (var k = 0; k < 6; k++){
-      $("<div>", {"class": "solid"}).appendTo("#bunker" + bunker);
+      $("<div>", {"class": "bunker-div solid"}).appendTo("#bunker" + bunker);
     }
     for (var l = 0; l < 3; l++){
       $("<div>", {"class": "broke"}).appendTo("#bunker" + bunker);
     }
-    $("<div>", {"class": "solid"}).appendTo("#bunker" + bunker);
+    $("<div>", {"class": "bunker-div solid"}).appendTo("#bunker" + bunker);
 };

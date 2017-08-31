@@ -61,6 +61,15 @@ Invaders.prototype.invadersFire = function() {
 Invaders.prototype.checkCollision = function() {
   var collision1 = $(".invaderFire").collision("#spaceship");
   var collision2 = $(".invaderFire").collision(".invader");
+  var bunkerHit = $(".invaderFire").collision(".bunker-div");
+
+  if (bunkerHit[0]) {
+    $(bunkerHit).removeClass("bunker-div solid").addClass("broke");
+    $('.invaderFire').remove();
+    this.fireTop = 0;
+    this.fireLeft = 0;
+    }
+
   if (collision2[0]){
     this.fire.addClass("hidden");
     return 0;
