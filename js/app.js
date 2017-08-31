@@ -21,6 +21,7 @@ var gameReady = function () {
   gameOver = game.checkGame(invader.y);
   if (!gameOver) {
     clearInterval(myInterval);
+    game.gameOver();
   }
 };
 

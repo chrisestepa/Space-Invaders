@@ -15,6 +15,9 @@ Game.prototype.createGame = function (){
   $("<header>").appendTo("#space-invaders");
   $("<div>", {"id": "score", "class": "col-md-6"}).html("Score: " + this.score).appendTo("header");
   $("<div>", {"id": "lives", "class": "col-md-6"}).html("Lives: ").appendTo("header");
+  for (var n = 0; n < 3; n++){
+    $("<div>", {"class": "live" + n}).appendTo("#lives");
+  }
   $("<div>", {"id": "invaders"}).appendTo("#space-invaders");
   for (var i=0; i < 5; i++){
     $("<div>", {"class": "row" + i}).appendTo("#invaders");
@@ -32,10 +35,22 @@ Game.prototype.createGame = function (){
 };
 
 Game.prototype.checkGame = function(invadersPos) {
-  $("#lives").html("Lives: " + this.lives);
-
-console.log("POS*HEIGHT: " + (invadersPos+this.invaderHeight));
-console.log("LIMIT: " + this.downLimit);
+  switch (this.lives) {
+    case 3:
+      break;
+    case 2:
+      $('.live0').css("opacity", "0");
+      break;
+    case 1:
+      $('.live0').css("opacity", "0");
+      $('.live1').css("opacity", "0");
+      break;
+    case 0:
+      $('.live0').css("opacity", "0");
+      $('.live1').css("opacity", "0");
+      $('.live2').css("opacity", "0");
+      break;
+  }
 
   if (this.lives === 0) {
     return 0;
@@ -61,4 +76,8 @@ var bunkerBuilder = function (bunker){
       $("<div>", {"class": "broke"}).appendTo("#bunker" + bunker);
     }
     $("<div>", {"class": "bunker-div solid"}).appendTo("#bunker" + bunker);
+};
+
+Game.prototype.gameOver = function(invadersPos) {
+  $('<div>', {"id": "game-over"}).appendTo("html");
 };
