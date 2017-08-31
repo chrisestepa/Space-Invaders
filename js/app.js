@@ -7,22 +7,29 @@ var gameOver = true;
 var hitVar = 0;
 
 var gameReady = function () {
-  newFire.shipFire();
-  game.score += newFire.checkCollision();
-  invader.invadersMove();
-  invader.invadersFire();
-  hitVar = invader.checkCollision();
-  if (hitVar){
-    ship.position = 650;
-    $("#spaceship").css("left", ship.position);
-  }
-  game.lives -= hitVar;
-  $('#score').html("SCORE: " + game.score);
-  gameOver = game.checkGame(invader.y);
-  if (!gameOver) {
-    clearInterval(myInterval);
-    game.gameOver();
-  }
+if ($('.invader').length > 0){
+    newFire.shipFire();
+    game.score += newFire.checkCollision();
+    invader.invadersMove();
+    invader.invadersFire();
+    hitVar = invader.checkCollision();
+    if (hitVar){
+      ship.position = 650;
+      $("#spaceship").css("left", ship.position);
+    }
+    game.lives -= hitVar;
+    $('#score').html("SCORE: " + game.score);
+    gameOver = game.checkGame(invader.y);
+    if (!gameOver) {
+      clearInterval(myInterval);
+      game.gameOver();
+    }
+}
+else {
+  game.youWin();
+  clearInterval(myInterval);
+}
+
 };
 
 $(document).ready(function (){

@@ -79,10 +79,15 @@ var bunkerBuilder = function (bunker){
     $("<div>", {"class": "bunker-div solid"}).appendTo("#bunker" + bunker);
 };
 
+Game.prototype.youWin = function() {
+  $('#space-invaders').addClass("opacity");
+  $('<div>', {"id": "game-over"}).appendTo("html");
+  $('<h2>').html("YOU SAVED THE GALAXY!").appendTo("#game-over");
+  $('<h3>').html("YOUR SCORE: " + this.score).appendTo("#game-over");
+};
+
 Game.prototype.gameOver = function(invadersPos) {
   $('#space-invaders').addClass("opacity");
-  this.score = 0;
-  this.live = 3;
   $('<div>', {"id": "game-over"}).appendTo("html");
   $('<h1>').html("GAME OVER").appendTo("#game-over");
   $('<h3>').html("YOUR SCORE: " + this.score).appendTo("#game-over");
