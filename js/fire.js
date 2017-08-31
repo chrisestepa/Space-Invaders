@@ -5,7 +5,9 @@ function Fire(pos) {
   this.control = "ok";
   this.cont = 0;
   this.fireAudio = new Audio('music/shoot.wav');
+  this.fireAudio.volume = 0.04;
   this.targetAudio = new Audio('music/invaderkilled.wav');
+  this.targetAudio.volume = 0.04;
 }
 
 

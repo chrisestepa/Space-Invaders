@@ -13,6 +13,16 @@ h1 {
   margin: 0;
 }
 
+h3 {
+  font-family: "Pixel Emulator";
+  font-size: 60px;
+  color: #733;
+  text-shadow: 5px 2px #AA0;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0;
+}
+
 #space-invaders{
   margin: 0;
   padding: 0;
@@ -211,7 +221,18 @@ hr {
 }
 
 #game-over{
-  height: 300px;
-  width: 200px;
-  background: yellow;
+  font-family: "Pixel Emulator";
+  height: 500px;
+  width: 900px;
+  border: 5px solid white;
+  background: black;
+  position: absolute;
+  top: 100px;
+  left: 250px;
+  z-index: 1;
+  text-align: center;
+}
+
+.opacity {
+  opacity: 0.7;
 }

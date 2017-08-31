@@ -11,6 +11,7 @@ function Game (){
 Game.prototype.createGame = function (){
   $("button").remove();
   $("h1").remove();
+  $("#game-over").remove();
   $("<audio autoplay='autoplay'>").html("<source src='./music/Space Invaders - Space Invaders.mp3'/>");
   $("<header>").appendTo("#space-invaders");
   $("<div>", {"id": "score", "class": "col-md-6"}).html("Score: " + this.score).appendTo("header");
@@ -79,5 +80,10 @@ var bunkerBuilder = function (bunker){
 };
 
 Game.prototype.gameOver = function(invadersPos) {
+  $('#space-invaders').addClass("opacity");
+  this.score = 0;
+  this.live = 3;
   $('<div>', {"id": "game-over"}).appendTo("html");
+  $('<h1>').html("GAME OVER").appendTo("#game-over");
+  $('<h3>').html("YOUR SCORE: " + this.score).appendTo("#game-over");
 };
