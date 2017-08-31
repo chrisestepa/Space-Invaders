@@ -19,10 +19,12 @@ Game.prototype.createGame = function (){
       $("<span>", {"class": "invader single-invader"+i + j}).appendTo(".row" + i);
     }
     }
-  /*$("<div>", {"id": "bunkers"}).appendTo("#space-invaders");
-  for (var k=0; k < 4; k++){
-    $("<div>", {"class": ("bunker" + k)}).appendTo("#bunkers");
-  }*/
+  // BUNKERS
+  $("<section>", {"id": "bunkers"}).appendTo("#space-invaders");
+  for (var m = 0; m < 4; m++){
+    bunkerBuilder(m);
+  }
+  /////////
   $("<div>", {"id": "spaceship"}).appendTo("#space-invaders");
   $("<hr>").appendTo("#space-invaders");
 
@@ -35,4 +37,20 @@ Game.prototype.checkGame = function() {
   } else {
     return 1;
   }
+};
+
+var bunkerBuilder = function (bunker){
+  $("<div>", {"id": "bunker" + bunker, "class": "container"}).appendTo("#bunkers");
+  $("<div>", {"class": "solid left-corner"}).appendTo("#bunker" + bunker);
+  for (var j = 0; j < 3; j++){
+      $("<div>", {"class": "solid"}).appendTo("#bunker" + bunker);
+    }
+    $("<div>", {"class": "solid right-corner"}).appendTo("#bunker" + bunker);
+    for (var k = 0; k < 6; k++){
+      $("<div>", {"class": "solid"}).appendTo("#bunker" + bunker);
+    }
+    for (var l = 0; l < 3; l++){
+      $("<div>", {"class": "broke"}).appendTo("#bunker" + bunker);
+    }
+    $("<div>", {"class": "solid"}).appendTo("#bunker" + bunker);
 };
