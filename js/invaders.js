@@ -6,7 +6,6 @@ function Invaders (){
   this.maxY = 600;
   this.control = "right";
   this.width = 965;
-//  this.numOfInvaders = 55;
   this.fireControl = true;
   this.fireTop = 0;
   this.fireLeft = 0;

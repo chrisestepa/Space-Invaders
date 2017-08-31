@@ -4,6 +4,8 @@ function Game (){
   this.score = 0;
   this.maxW = 1250;
   this.minW = 82;
+  this.downLimit = 680;
+  this.invaderHeight = 320;
 }
 
 Game.prototype.createGame = function (){
@@ -29,11 +31,18 @@ Game.prototype.createGame = function (){
 
 };
 
-Game.prototype.checkGame = function() {
+Game.prototype.checkGame = function(invadersPos) {
   $("#lives").html("Lives: " + this.lives);
+
+console.log("POS*HEIGHT: " + (invadersPos+this.invaderHeight));
+console.log("LIMIT: " + this.downLimit);
+
   if (this.lives === 0) {
     return 0;
-  } else {
+  } else if (invadersPos+this.invaderHeight >= this.downLimit){
+    return 0;
+  }
+  else {
     return 1;
   }
 };

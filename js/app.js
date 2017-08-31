@@ -18,7 +18,7 @@ var gameReady = function () {
   }
   game.lives -= hitVar;
   $('#score').html("SCORE: " + game.score);
-  gameOver = game.checkGame();
+  gameOver = game.checkGame(invader.y);
   if (!gameOver) {
     clearInterval(myInterval);
   }
