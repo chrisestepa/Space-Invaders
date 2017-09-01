@@ -20,7 +20,7 @@ h2 {
   color: #700;
   text-shadow: 5px 2px #AA0;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 30px;
   margin: 0;
 }
 
@@ -30,7 +30,7 @@ h3 {
   color: #700;
   text-shadow: 5px 2px #AA0;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 50px;
   margin: 0;
 }
 
@@ -38,7 +38,6 @@ h3 {
   background: url("../img/giphy.gif");
   background-size: cover;
   background-position: center;
-  /*background: url("../img/background.jpg");*/
   height: 600px;
   width: 800px;
   position: relative;
@@ -175,14 +174,26 @@ hr {
   width: 160px;
   height: 120px;
   background: rgba(0, 0, 0, 0.80);
-  color: #FBB;
+  color: #F00;
   font-size: 25px;
+}
+
+#restart {
+    font-family: "Pixel Emulator";
+    position: absolute;
+    top: 340px;
+    left: 350px;
+    width: 160px;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.80);
+    color: #F00;
+    font-size: 25px;
 }
 
 #gameover {
   font-family: "Spac3 tech";
   font-size: 120px;
-  color: #733;
+  color: #700;
   text-shadow: 5px 2px #AA0;
   text-align: center;
   padding-top: 100px;
