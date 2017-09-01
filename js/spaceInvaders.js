@@ -9,8 +9,7 @@ function Game (){
 }
 
 Game.prototype.createGame = function (){
-  $("button").remove();
-  $("h1").remove();
+  $('#firstdiv').remove();
   $("#game-over").remove();
   $("<audio autoplay='autoplay' loop='true'>").html("<source src='./music/Space Invaders - Space Invaders.mp3'/>");
   $("<header>").appendTo("#space-invaders");
@@ -89,6 +88,6 @@ Game.prototype.youWin = function() {
 Game.prototype.gameOver = function(invadersPos) {
   $('#space-invaders').addClass("opacity");
   $('<div>', {"id": "game-over"}).appendTo("html");
-  $('<h1>').html("GAME OVER").appendTo("#game-over");
+  $('<h2>').addClass("gameOverMessage").html("GAME OVER").appendTo("#game-over");
   $('<h3>').html("YOUR SCORE: " + this.score).appendTo("#game-over");
 };

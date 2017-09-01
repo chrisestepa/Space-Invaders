@@ -5,18 +5,19 @@ body {
 
 h1 {
   font-family: "Pixel Emulator";
-  font-size: 100px;
-  color: #733;
+  font-size: 70px;
+  color: #700;
   text-shadow: 5px 2px #AA0;
-  text-align: center;
-  padding-top: 100px;
+  text-align: left;
+  padding-top: 40px;
+  padding-left: 40px;
   margin: 0;
 }
 
 h2 {
   font-family: "Pixel Emulator";
   font-size: 80px;
-  color: #733;
+  color: #700;
   text-shadow: 5px 2px #AA0;
   text-align: center;
   padding-top: 100px;
@@ -26,11 +27,25 @@ h2 {
 h3 {
   font-family: "Pixel Emulator";
   font-size: 50px;
-  color: #733;
+  color: #700;
   text-shadow: 5px 2px #AA0;
   text-align: center;
   padding-top: 100px;
   margin: 0;
+}
+
+#firstdiv{
+  background: url("../img/giphy.gif");
+  background-size: cover;
+  background-position: center;
+  /*background: url("../img/background.jpg");*/
+  height: 600px;
+  width: 800px;
+  position: relative;
+  left: 320px;
+  top: 60px;
+  border: 2px solid yellow;
+  border-radius: 20%;
 }
 
 #space-invaders{
@@ -155,11 +170,11 @@ hr {
 #btn {
   font-family: "Pixel Emulator";
   position: absolute;
-  top: 30vw;
-  left: 45vw;
+  top: 200px;
+  left: 40px;
   width: 160px;
   height: 120px;
-  background: rgba(0, 0, 0, 0.50);
+  background: rgba(0, 0, 0, 0.80);
   color: #FBB;
   font-size: 25px;
 }
@@ -239,6 +254,12 @@ hr {
   top: 100px;
   left: 250px;
   z-index: 1;
+  text-align: center;
+}
+
+.gameOverMessage {
+  font-size: 110px;
+  top: 300px;
   text-align: center;
 }
 
