@@ -12,7 +12,7 @@ Game.prototype.createGame = function (){
   $("button").remove();
   $("h1").remove();
   $("#game-over").remove();
-  $("<audio autoplay='autoplay'>").html("<source src='./music/Space Invaders - Space Invaders.mp3'/>");
+  $("<audio autoplay='autoplay' loop='true'>").html("<source src='./music/Space Invaders - Space Invaders.mp3'/>");
   $("<header>").appendTo("#space-invaders");
   $("<div>", {"id": "score", "class": "col-md-6"}).html("Score: " + this.score).appendTo("header");
   $("<div>", {"id": "lives", "class": "col-md-6"}).html("Lives: ").appendTo("header");
