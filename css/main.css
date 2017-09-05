@@ -59,8 +59,8 @@ h3 {
 }
 
 header {
-  margin: 0px 100px;
-  padding-left: 50px;
+  margin: 0px 60px;
+  padding-left: 110px;
   padding-top: 20px;
 }
 
@@ -69,6 +69,7 @@ header {
   height: 5vh;
   background: rgba(0, 0, 0, 0.20);
   border: 3px solid white;
+  margin: 0 20px;
   font-size: 20px;
   padding-top: 2px;
   padding-left: 5px;
@@ -81,7 +82,7 @@ header {
   height: 5vh;
   background: rgba(0, 0, 0, 0.20);
   border: 3px solid white;
-  margin: 0 0 0 250px;
+  margin: 0 0 0 150px;
   font-size: 20px;
   padding-top: 2px;
   padding-left: 5px;
@@ -130,8 +131,8 @@ span {
 
 
 #spaceship{
-  width: 65px;
-  height: 35px;
+  width: 75px;
+  height: 40px;
   background-image: url('../img/player.png');
   background-size: contain;
   opacity: 0.6;
@@ -143,7 +144,7 @@ span {
 }
 
 hr {
-  width: 68vw;
+  width: 980px;
   height: 0.5vh;
   background: green;
   position: absolute;
@@ -207,7 +208,7 @@ hr {
 #bunkers {
   position: absolute;
   top: 450px;
-  margin-left: 150px;
+  margin-left: 170px;
 }
 
 .container {
