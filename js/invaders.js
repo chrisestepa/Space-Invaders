@@ -1,7 +1,7 @@
 function Invaders (){
   this.x = 200;
   this.y = 70;
-  this.maxW = 1200;
+  this.maxW = 930;
   this.minW = 70;
   this.maxY = 600;
   this.control = "right";
@@ -19,7 +19,7 @@ Invaders.prototype.invadersMove = function() {
         this.x -= 1;
         $('#invaders').css("left", this.x);
       } else {
-        this.y += 40;
+        this.y += 30;
         $('#invaders').css("top", this.y);
         this.control = "right";
       }
@@ -29,7 +29,7 @@ Invaders.prototype.invadersMove = function() {
         this.x += 1;
         $('#invaders').css("left", this.x);
       } else {
-        this.y += 40;
+        this.y += 30;
         $('#invaders').css("top", this.y);
         this.control = "left";
       }

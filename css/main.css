@@ -60,7 +60,7 @@ h3 {
 
 header {
   margin: 0px 100px;
-  padding-left: 110px;
+  padding-left: 50px;
   padding-top: 20px;
 }
 
@@ -69,7 +69,6 @@ header {
   height: 5vh;
   background: rgba(0, 0, 0, 0.20);
   border: 3px solid white;
-  margin: 0 20px;
   font-size: 20px;
   padding-top: 2px;
   padding-left: 5px;
@@ -82,7 +81,7 @@ header {
   height: 5vh;
   background: rgba(0, 0, 0, 0.20);
   border: 3px solid white;
-  margin: 0 0 0 350px;
+  margin: 0 0 0 250px;
   font-size: 20px;
   padding-top: 2px;
   padding-left: 5px;
@@ -91,8 +90,8 @@ header {
 }
 
 #invaders{
-  width: 700px;
-  height: 320px;
+  width: 650px;
+  height: 235px;
   margin: 0px;
   position: absolute;
   top: 70px;
@@ -105,8 +104,8 @@ header {
 }
 
 span {
-  width: 3vw;
-  height: 7vh;
+  width: 39px;
+  height: 40px;
   display: inline-block;
   margin: 0 10px;
 }
@@ -131,24 +130,24 @@ span {
 
 
 #spaceship{
-  width: 75px;
-  height: 40px;
+  width: 65px;
+  height: 35px;
   background-image: url('../img/player.png');
   background-size: contain;
   opacity: 0.6;
   background-repeat: no-repeat;
   position: absolute;
-  top: 640px;
+  top: 570px;
   left: 650px;
   border-radius: 20%;
 }
 
 hr {
-  width: 90vw;
+  width: 68vw;
   height: 0.5vh;
   background: green;
   position: absolute;
-  top: 670px;
+  top: 600px;
   left: 70px;
 }
 
@@ -208,28 +207,28 @@ hr {
 #bunkers {
   position: absolute;
   top: 450px;
-  margin-left: 100px;
+  margin-left: 150px;
 }
 
 .container {
   padding: 0;
   height: 90px;
-  width: 150px;
+  width: 100px;
   position: relative;
   display: inline-block;
-  margin: 0 75px;
+  margin: 0 50px;
 }
 
 .solid {
   background: green;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   float: left;
 }
 
 .broke {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   float: left;
   opacity: 0;
 }

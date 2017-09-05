@@ -35,7 +35,7 @@ else {
 $(document).ready(function (){
   $("#btn").on("click", function(){
     game.createGame();
-    myInterval = setInterval (gameReady,30);
+    myInterval = setInterval (gameReady,40);
   });
 });
 

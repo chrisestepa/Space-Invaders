@@ -1,6 +1,6 @@
 function Fire(pos) {
   this.position = pos + 50;
-  this.top = 620;
+  this.top = 560;
   this.yMax = 120;
   this.control = "ok";
   this.cont = 0;
@@ -13,7 +13,7 @@ function Fire(pos) {
 
 Fire.prototype.createFire = function(pos) {
   if (this.control == "ok") {
-    this.top = 620;
+    this.top = 555;
     var fire = ($("<div>", {"class": "shipFire"}).css({"left": pos + 35,"top": this.top}));
     fire.appendTo("#space-invaders");
     this.fireAudio.play();

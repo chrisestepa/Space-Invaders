@@ -2,7 +2,7 @@ function Game (){
   this.level = 0;
   this.lives = 3;
   this.score = 0;
-  this.maxW = 1250;
+  this.maxW = 951;
   this.minW = 82;
   this.downLimit = 680;
   this.invaderHeight = 320;
