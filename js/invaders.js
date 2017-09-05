@@ -5,7 +5,6 @@ function Invaders (){
   this.minW = 70;
   this.maxY = 600;
   this.control = "right";
-  this.width = 965;
   this.fireControl = true;
   this.fireTop = 0;
   this.fireLeft = 0;
@@ -13,6 +12,8 @@ function Invaders (){
 }
 
 Invaders.prototype.invadersMove = function() {
+  this.width = ($('.row0 .invader').length) * 40 + 140;
+
   switch (this.control) {
     case "left":
       if (this.x > this.minW) {
@@ -25,7 +26,7 @@ Invaders.prototype.invadersMove = function() {
       }
       break;
     case "right":
-      if (this.x + 550 < (this.maxW)) {
+      if (this.x + this.width < (this.maxW)) {
         this.x += 1;
         $('#invaders').css("left", this.x);
       } else {
