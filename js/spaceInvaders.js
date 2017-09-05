@@ -34,6 +34,16 @@ Game.prototype.createGame = function (){
 
 };
 
+Game.prototype.instructions = function() {
+  $('#firstdiv').remove();
+  $("#game-over").remove();
+  $('<div>', {"id": "how-to"}).appendTo("body");
+  $('<button type="button" name="Go-Back">').attr("id","go-back").html("Go back").appendTo("#how-to");
+  $("#go-back").on("click", function(){
+    location.reload();
+  });
+};
+
 Game.prototype.checkGame = function(invadersPos) {
   switch (this.lives) {
     case 3:

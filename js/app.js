@@ -37,6 +37,11 @@ $(document).ready(function (){
     game.createGame();
     myInterval = setInterval (gameReady,40);
   });
+
+  $("#instructions").on("click", function(){
+    game.instructions();
+  });
+
 });
 
 $(document).on('keydown', function(e) {
