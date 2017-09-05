@@ -305,6 +305,9 @@ hr {
   border: 5px solid white;
   background: black;
   position: absolute;
+  background-image: url("../img/instructions.jpg");
+  background-position: center;
+  background-size: cover;
   top: 100px;
   left: 250px;
   z-index: 1;
