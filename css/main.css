@@ -1,11 +1,10 @@
+html {
+  font-family: 'VT323', monospace;
+}
+
 body {
   margin: 0;
   padding: 0;
-}
-
-@font-face {
-    font-family: "Pixel Emulator";
-    src: url("PixelEmulator.otf");
 }
 
 h1 {
