@@ -1,5 +1,6 @@
-html {
-  font-family: 'VT323', monospace;
+@font-face {
+    font-family: "Pixel Emulator";
+    src: url("PixelEmulator.otf") format("opentype");
 }
 
 body {
@@ -8,8 +9,7 @@ body {
 }
 
 h1 {
-  /*font-family: "Pixel Emulator";*/
-  font-family: 'VT323', monospace;
+  font-family: "Pixel Emulator";
   font-size: 70px;
   color: #700;
   text-shadow: 5px 2px #AA0;
