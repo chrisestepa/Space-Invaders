@@ -3,6 +3,10 @@
     src: url("../PixelEmulator.otf") format("opentype");
 }
 
+html {
+    font-family: "Pixel Emulator";
+}
+
 body {
   margin: 0;
   padding: 0;
