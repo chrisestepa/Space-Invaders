@@ -9,6 +9,7 @@ body {
 
 h1 {
   /*font-family: "Pixel Emulator";*/
+  font-family: 'VT323', monospace;
   font-size: 70px;
   color: #700;
   text-shadow: 5px 2px #AA0;
